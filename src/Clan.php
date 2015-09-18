@@ -37,7 +37,7 @@
 
         function setName($new_name)
         {
-            $this->name = (string) $new_name;
+            $this->name = $new_name;
         }
 
         function setRank($new_rank)
@@ -52,8 +52,34 @@
 
         function save()
         {
-            $GLOBALS['DB']->exec("INSERT INTO member (name, rank, join_date) VALUES ('{$this->getName()}', '{$this->getRank()}', {$this->getJoin()});");
+            $GLOBALS['DB']->exec("INSERT INTO members (name, rank, join_date) VALUES ('{$this->getName()}', '{$this->getRank()}', {$this->getJoin()});");
             $this->id = $GLOBALS['DB']->lastInsertId();
+        }
+
+        function update($new_rank)
+        {
+            $GLOBALS['DB']->exec("UPDATE members SET rank = '{$new_rank}' WHERE id = {$this->getId()};");
+            $this->id = $GLOBALS['DB']->lastInsertId();
+        }
+
+        static function getAll()
+        {
+            $member_query = $GLOBALS['DB']->query("SELECT * FROM members");
+            $all_members = array();
+            foreach ($member_query as $member) {
+                $id = $member['id'];
+                $name = $member['name'];
+                $rank = $member['rank'];
+                $join = $member['join_date'];
+                $new_member = new Clan($id, $name, $rank, $join);
+                array_push($all_members, $new_member);
+            }
+            return $all_members;
+        }
+
+        static function deleteAll()
+        {
+            $GLOBALS['DB']->exec("DELETE FROM members");
         }
     }
  ?>
