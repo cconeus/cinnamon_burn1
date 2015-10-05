@@ -1,4 +1,4 @@
-nicksFlicks.factory('FilmReviewsFactory', function FilmReviewsFactory() {
+cinnamonBurn.factory('FilmReviewsFactory', function FilmReviewsFactory() {
   var factory = {};
   factory.movies = [];
 

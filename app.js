@@ -1,14 +1,14 @@
-var nicksFlicks = angular.module('nicksFlicks', ['ui.router']);
+var cinnamonBurn = angular.module('cinnamonBurn', ['ui.router']);
 
-nicksFlicks.config(function($stateProvider, $urlRouterProvider) {
+cinnamonBurn.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('home', {
     url: "",
     views: {
       'header': {
-        templateUrl: "partials/header.html",
+        templateUrl: 'partials/header.html',
       },
       'body': {
-        templateUrl: "partials/welcome.html",
+        templateUrl: "partials/home.html",
       },
     }
   });

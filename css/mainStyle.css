@@ -1,18 +1,20 @@
 body {
   font-family: 'ABeeZee', sans-serif;
-  background-image: url(http://pcwallart.com/images/flames-white-background-border-wallpaper-3.jpg);
-  background-position: fixed;
+  background: url(http://pcwallart.com/images/flames-white-background-border-wallpaper-3.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  color: white;
 }
 
 .header {
   border-bottom: double rgb(103, 112, 255) 2px;
-  background-color: rgba(235, 243, 251, 0.6);
+  background-color: rgba(38, 34, 22, .7);
   padding-left: 10px;
-  padding-bottom: 8px;
+  background-image: url(http://img3.wikia.nocookie.net/__cb20131117152043/clashofclans/images/1/1c/Nwiz.png);
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 .welcome {
@@ -24,17 +26,36 @@ body {
   padding: 10px;
   padding-bottom: 90px;
   padding-top: 90px;
+  color: rgb(214, 210, 206);
 }
 
-.review {
-  border-left: solid rgb(0, 70, 162) 1px;
-  background-color: rgba(235, 243, 251, 0.9);
+.clanInfo {
+  background-color: rgba(73, 65, 44, 0.9);
+  min-width: 40%;
   text-align: center;
   margin-bottom: auto;
-  margin-top:10px;
+  margin:10px;
   padding: 10px;
+  border-radius: 8px;
 }
 
-.sideBar {
+.menu-row {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: rgb(73, 65, 44);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.body-style {
+  margin-top: 6px;
+  background-color: rgba(176, 161, 142, 0.9);
+  background-size: auto;
   padding: 20px;
+  color: black;
+}
+
+.day-mode {
+  background: white;
+  color: black;
 }

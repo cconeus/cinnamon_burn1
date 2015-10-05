@@ -19,6 +19,10 @@
         return $app['twig']->render('index.html.twig');
     });
 
+    $app->post("/add_member", function() use ($app) {
+      Clan::
+    })
+
 
     return $app;
 ?>
