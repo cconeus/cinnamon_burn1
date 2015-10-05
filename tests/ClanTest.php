@@ -31,12 +31,36 @@
             $this->assertEquals($name, $result);
         }
 
-        function test_save()
+        function test_getRank()
         {
-            $id = 1;
             $name = "cconeus";
             $rank = "Leader";
-            $join = 20140915;
+            $test_name = new Clan($id, $name, $rank, $join);
+
+            $result = $test_name->getRank();
+
+            $this->assertEquals($rank, $result);
+        }
+
+        function test_getJoin()
+        {
+
+            $name = "cconeus";
+            $rank = "Leader";
+            $join = '2014-09-15';
+            $test_join = new Clan($id, $name, $rank, $join);
+
+            $result = $test_join->getJoin();
+
+            $this->assertEquals($join, $result);
+        }
+
+        function test_save()
+        {
+
+            $name = "cconeus";
+            $rank = "Leader";
+            $join = '2014-09-15';
             $test_name = new Clan($id, $name, $rank, $join);
 
             $test_name->save();
@@ -45,19 +69,39 @@
             $this->assertEquals($test_name, $result[0]);
         }
 
-        function test_update()
+        function test_getAll()
         {
-            $id = 1;
+
             $name = "cconeus";
             $rank = "Leader";
-            $join = 20140915;
+            $join = '2014-09-15';
             $test_rank = new Clan($id, $name, $rank, $join);
             $test_rank->save();
 
+
+            $name2 = "cconeus2";
+            $rank2 = "Leader2";
+            $join2 = "2014-09-16";
+            $test_rank2 = new Clan($id, $name, $rank, $join);
+            $test_rank2->save();
+
+            $result = Clan::getAll();
+
+            $this->assertEquals([$test_rank, $test_rank2], $result);
+        }
+
+        function test_update()
+        {
+
+            $name = "cconeus";
+            $rank = "Leader";
+            $join = '2014-09-15';
+            $test_rank = new Clan($id, $name, $rank, $join);
+            $test_rank->save();
             $new_test_rank = "Co-Leader";
 
             $test_rank->update($new_test_rank);
-            
+
 
             $this->assertEquals("Co-Leader", $test_rank->getRank());
         }

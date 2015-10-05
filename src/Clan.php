@@ -52,7 +52,7 @@
 
         function save()
         {
-            $GLOBALS['DB']->exec("INSERT INTO members (name, rank, join_date) VALUES ('{$this->getName()}', '{$this->getRank()}', {$this->getJoin()});");
+            $GLOBALS['DB']->exec("INSERT INTO members (name, rank, join_date) VALUES ('{$this->getName()}', '{$this->getRank()}', '{$this->getJoin()}');");
             $this->id = $GLOBALS['DB']->lastInsertId();
         }
 

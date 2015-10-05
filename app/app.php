@@ -15,7 +15,7 @@
     ));
 
     $app->get("/", function() use ($app) {
-        getAll();
+        Clan::getAll();
         return $app['twig']->render('index.html.twig');
     });
 

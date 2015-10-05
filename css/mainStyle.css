@@ -1,0 +1,40 @@
+body {
+  font-family: 'ABeeZee', sans-serif;
+  background-image: url(http://pcwallart.com/images/flames-white-background-border-wallpaper-3.jpg);
+  background-position: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header {
+  border-bottom: double rgb(103, 112, 255) 2px;
+  background-color: rgba(235, 243, 251, 0.6);
+  padding-left: 10px;
+  padding-bottom: 8px;
+}
+
+.welcome {
+  border: solid rgb(0, 70, 162) 1px;
+  background-color: rgba(235, 243, 251, 0.9);
+  text-align: center;
+  margin-bottom: auto;
+  margin-top: 10px;
+  padding: 10px;
+  padding-bottom: 90px;
+  padding-top: 90px;
+}
+
+.review {
+  border-left: solid rgb(0, 70, 162) 1px;
+  background-color: rgba(235, 243, 251, 0.9);
+  text-align: center;
+  margin-bottom: auto;
+  margin-top:10px;
+  padding: 10px;
+}
+
+.sideBar {
+  padding: 20px;
+}
